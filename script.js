@@ -531,7 +531,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// Add some Easter eggs
+//  Easter eggs
 let clickCount = 0;
 const logo = document.querySelector('.logo');
 if (logo) {
@@ -541,7 +541,7 @@ if (logo) {
       showNotification('🧞‍♂️ You found the Easter egg! TitleGenie loves you!', 'success');
       clickCount = 0;
       
-      // Add some sparkle effects
+      // sparkle effects
       for (let i = 0; i < 10; i++) {
         setTimeout(() => {
           const sparkle = document.createElement('div');
@@ -549,7 +549,7 @@ if (logo) {
           sparkle.style.position = 'fixed';
           sparkle.style.left = Math.random() * window.innerWidth + 'px';
           sparkle.style.top = Math.random() * window.innerHeight + 'px';
-          sparkle.style.fontSize = '20px';
+          sparkle.style.fontSize = '50px';
           sparkle.style.pointerEvents = 'none';
           sparkle.style.animation = 'sparkle 2s ease-out forwards';
           sparkle.style.zIndex = '9999';
