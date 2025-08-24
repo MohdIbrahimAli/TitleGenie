@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YouTube Title and Tag Generator</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <span class="logo-icon">🧞‍♂️</span>
+      <span class="logo-icon"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/genie.png" alt="genie"/></span>
       <span class="logo-text">TitleGenie</span>
     </div>
     <nav class="nav-links">
@@ -19,7 +22,7 @@
       <a href="contact.html">Contact</a>
       <a href="terms.html" class="terms-link">Terms</a>
       <a href="login.html" class="login-btn" id="loginLink">
-        <span class="login-icon">👤</span>
+        <span class="login-icon"><img width="20" height="20" src="https://img.icons8.com/fluency-systems-filled/48/user.png" alt="user"/></span>
         Login
       </a>
     </nav>
@@ -34,14 +37,14 @@
         YouTube Title and Tag Generator
         <span class="hero-emoji">✨</span>
       </h1>
-      <p class="hero-subtitle">Create compelling titles and tags that boost your video views</p>
+      <p class="hero-subtitle">Catchy video titles in seconds</p>
       <div class="search-box">
         <div class="input-wrapper">
-          <span class="search-icon">🔍</span>
+          <span class="search-icon"><img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="search--v1"/></span>
           <input type="text" id="topicInput" placeholder="Enter your video topic (e.g., cooking tips, gaming review)" />
         </div>
         <button class="generate-btn" id="generateBtn">
-          <span class="btn-icon">✨</span>
+          <span class="btn-icon"><img width="24" height="24" src="https://img.icons8.com/material/24/star--v1.png" alt="star--v1"/></span>
           Generate
         </button>
       </div>
@@ -65,17 +68,17 @@
     </h2>
     <div class="steps">
       <div class="step">
-        <div class="icon">💡</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h1m8-9v1m8 8h1M5.6 5.6l.7.7m12.1-.7l-.7.7M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0-1 3a2 2 0 0 1-4 0a3.5 3.5 0 0 0-1-3m.7 1h4.6"/></svg></div>
         <h3>Enter Topic</h3>
         <p>Type in your video topic or keyword to get started</p>
       </div>
       <div class="step">
-        <div class="icon">🎯</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 512 512"><path fill="currentColor" d="M134.745 22.098c-4.538-.146-9.08 1.43-14.893 7.243c-5.586 5.586-11.841 21.725-15.248 35.992c-.234.979-.444 1.907-.654 2.836l114.254 105.338c-7.18-28.538-17.555-59.985-29.848-86.75c-11.673-25.418-25.249-46.657-37.514-57.024c-6.132-5.183-11.56-7.488-16.097-7.635M92.528 82.122L82.124 92.526L243.58 267.651l24.072-24.072zm-24.357 21.826c-.929.21-1.857.42-2.836.654c-14.267 3.407-30.406 9.662-35.993 15.248c-5.813 5.813-7.39 10.355-7.244 14.893c.147 4.538 2.452 9.965 7.635 16.098c10.367 12.265 31.608 25.842 57.025 37.515c26.766 12.293 58.211 22.669 86.749 29.848L68.17 103.948zM280.899 255.79l-25.107 25.107l73.265 79.469l31.31-31.31zm92.715 85.476l-32.346 32.344l2.07 2.246c.061.058 4.419 4.224 10.585 6.28c6.208 2.069 12.71 2.88 21.902-6.313s8.38-15.694 6.31-21.902c-2.057-6.174-6.235-10.54-6.283-10.59zm20.172 41.059a46 46 0 0 1-5.233 6.226a46 46 0 0 1-6.226 5.235L489.91 489.91z"/></svg></div>
         <h3>Generate Title</h3>
         <p>Get a compelling, SEO-optimized YouTube title</p>
       </div>
       <div class="step">
-        <div class="icon">🏷️</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 24 24"><path fill="currentColor" d="m21.41 11.58l-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5A1.5 1.5 0 0 1 6.5 5"/></svg></div>
         <h3>Get Tags</h3>
         <p>Receive relevant hashtags and keywords for better reach</p>
       </div>
@@ -85,27 +88,27 @@
   <!-- Features Section -->
   <section class="features">
     <h2>
-      <span class="section-emoji">🌟</span>
+      <span class="section-emoji"></span>
       Why Choose TitleGenie?
     </h2>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">🎨</div>
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 20 20"><g fill="currentColor"><path fill-rule="evenodd" d="M14.725 13.334c.97-3.623-1.336-7.377-5.135-8.395C5.323 3.795-.725 6.762.544 10.35c.383 1.084 1.134 1.341 2.682 1.363l.108.002c1.1.013 1.471.1 1.678.436c.214.348.216.756.054 1.788c-.067.422-.088.569-.113.794c-.145 1.3.067 2.274.89 3.16c2.584 2.784 7.788-.48 8.882-4.56M1.486 10.017c-.908-2.57 4.217-5.084 7.845-4.112c3.277.878 5.252 4.093 4.428 7.17c-.924 3.446-5.287 6.182-7.183 4.14c-.594-.64-.745-1.333-.63-2.37c.024-.205.044-.344.108-.75c.2-1.275.197-1.836-.19-2.467c-.465-.756-1.059-.894-2.517-.912l-.107-.002c-1.159-.016-1.562-.154-1.754-.697" clip-rule="evenodd"/><path d="M4.75 9.5a1.25 1.25 0 1 1 0-2.5a1.25 1.25 0 0 1 0 2.5m4 0a1.25 1.25 0 1 1 0-2.5a1.25 1.25 0 0 1 0 2.5m2.5 3a1.25 1.25 0 1 1 0-2.5a1.25 1.25 0 0 1 0 2.5M9.75 16a1.25 1.25 0 1 1 0-2.5a1.25 1.25 0 0 1 0 2.5m3.62-12.395a1 1 0 0 1 1.371.443l4.093 8.4a.652.652 0 0 1-1.149.611l-4.708-8.07a1 1 0 0 1 .394-1.384"/><path fill-rule="evenodd" d="M11.538 3.484c.486.915 1.305 1.171 2.097.75c.791-.42 1.038-1.243.551-2.158C13.63 1.028 12.438.078 11.648.497s-.668 1.939-.11 2.987m.882-.47a3.2 3.2 0 0 1-.32-1.137a2 2 0 0 1 .018-.496l.018.009c.05.024.205.096.403.254c.302.241.602.596.764.901c.229.43.164.646-.138.807c-.3.16-.516.092-.745-.337" clip-rule="evenodd"/></g></svg></div>
         <h3>Creative Titles</h3>
         <p>Generate catchy, click-worthy titles that stand out</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📊</div>
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 1024 1024"><path fill="currentColor" d="M944 224c-44.192 0-79.999 35.824-79.999 80c0 9.072 1.84 17.632 4.607 25.76L673.6 497.68C659.92 486.784 642.848 480 624 480c-21.743 0-41.407 8.736-55.808 22.816l-152.752-76.48C412.465 384.848 378.241 352 336 352c-44.175 0-80 35.824-80 80c0 12.096 2.88 23.44 7.68 33.712L107.936 645.296C99.2 642.032 89.872 640 80 640c-44.176 0-80 35.824-80 80s35.824 80 80 80s80-35.824 80-80c0-10.64-2.176-20.767-5.952-30.048l158.272-181.92C319.856 510.368 327.696 512 336 512c23.28 0 44.047-10.112 58.671-26l149.408 74.912C544.608 604.656 580.127 640 624 640c44.193 0 80-35.824 80-80c0-1.424-.336-2.752-.416-4.16L911.68 377.072C921.584 381.456 932.463 384 944 384c44.193 0 80-35.808 80-80c0-44.176-35.807-80-79.999-80z"/></svg></div>
         <h3>SEO Optimized</h3>
         <p>Boost your video's discoverability with smart keywords</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M9.94 2.512a20.8 20.8 0 0 1 4.692 0l1.596.182a.75.75 0 0 1 .62 1.003l-2.203 6.016H17a.75.75 0 0 1 .702 1.014l-.19.507a35.8 35.8 0 0 1-5.535 9.745l-.391.49A.75.75 0 0 1 10.25 21v-7.152H8.429a.75.75 0 0 1-.748-.684l-.122-1.382a40 40 0 0 1 0-7.027l.122-1.382a.75.75 0 0 1 .663-.68zm4.523 1.49a19.3 19.3 0 0 0-4.354 0l-.987.113l-.069.772c-.2 2.25-.2 4.513 0 6.763l.062.698H11a.75.75 0 0 1 .75.75v5.704a34.3 34.3 0 0 0 4.163-7.589H13.57a.75.75 0 0 1-.704-1.007l2.244-6.13z" clip-rule="evenodd"/></svg></div>
         <h3>Instant Results</h3>
         <p>Get titles and tags in seconds, not hours</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🎯</div>
+        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="95" height="95" viewBox="0 0 512 512"><path fill="currentColor" d="M134.745 22.098c-4.538-.146-9.08 1.43-14.893 7.243c-5.586 5.586-11.841 21.725-15.248 35.992c-.234.979-.444 1.907-.654 2.836l114.254 105.338c-7.18-28.538-17.555-59.985-29.848-86.75c-11.673-25.418-25.249-46.657-37.514-57.024c-6.132-5.183-11.56-7.488-16.097-7.635M92.528 82.122L82.124 92.526L243.58 267.651l24.072-24.072zm-24.357 21.826c-.929.21-1.857.42-2.836.654c-14.267 3.407-30.406 9.662-35.993 15.248c-5.813 5.813-7.39 10.355-7.244 14.893c.147 4.538 2.452 9.965 7.635 16.098c10.367 12.265 31.608 25.842 57.025 37.515c26.766 12.293 58.211 22.669 86.749 29.848L68.17 103.948zM280.899 255.79l-25.107 25.107l73.265 79.469l31.31-31.31zm92.715 85.476l-32.346 32.344l2.07 2.246c.061.058 4.419 4.224 10.585 6.28c6.208 2.069 12.71 2.88 21.902-6.313s8.38-15.694 6.31-21.902c-2.057-6.174-6.235-10.54-6.283-10.59zm20.172 41.059a46 46 0 0 1-5.233 6.226a46 46 0 0 1-6.226 5.235L489.91 489.91z"/></svg></div>
         <h3>Trend-Aware</h3>
         <p>Stay current with trending topics and keywords</p>
       </div>
