@@ -5,6 +5,8 @@ const generatedTitle = document.getElementById("generatedTitle");
 const generatedTags = document.getElementById("generatedTags");
 const copyBtn = document.getElementById("copyBtn");
 const loginLink = document.getElementById("loginLink");
+const navbarToggle = document.querySelector('.navbar-toggle');
+const navbarMenu = document.querySelector('.nav-links');
 
 // API Configuration for AI Model
 const API_CONFIG = {
@@ -130,6 +132,10 @@ function checkFirstVisit() {
     }
   }
 }
+navbarToggle.addEventListener("click", () => {
+  navbarMenu.classList.toggle("active");
+  navbarToggle.classList.toggle("active");
+});
 
 // Check login state and update UI
 function checkLoginState() {
@@ -439,7 +445,7 @@ function showNotification(message, type = 'info', duration = 4000) {
     }
     
     .notification-error {
-      border-left: 4px solid #dc3545;
+      border-left: 4px solid #15191a;
     }
     
     .notification-info {
@@ -529,49 +535,4 @@ function removeNotification(notification) {
 // Utility functions
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-//  Easter eggs
-let clickCount = 0;
-const logo = document.querySelector('.logo');
-if (logo) {
-  logo.addEventListener('click', () => {
-    clickCount++;
-    if (clickCount === 5) {
-      showNotification('🧞‍♂️ You found the Easter egg! TitleGenie loves you!', 'success');
-      clickCount = 0;
-      
-      // sparkle effects
-      for (let i = 0; i < 10; i++) {
-        setTimeout(() => {
-          const sparkle = document.createElement('div');
-          sparkle.textContent = '✨';
-          sparkle.style.position = 'fixed';
-          sparkle.style.left = Math.random() * window.innerWidth + 'px';
-          sparkle.style.top = Math.random() * window.innerHeight + 'px';
-          sparkle.style.fontSize = '50px';
-          sparkle.style.pointerEvents = 'none';
-          sparkle.style.animation = 'sparkle 2s ease-out forwards';
-          sparkle.style.zIndex = '9999';
-          
-          const sparkleStyle = document.createElement('style');
-          sparkleStyle.textContent = `
-            @keyframes sparkle {
-              0% { opacity: 1; transform: scale(0) rotate(0deg); }
-              50% { opacity: 1; transform: scale(1) rotate(180deg); }
-              100% { opacity: 0; transform: scale(0) rotate(360deg); }
-            }
-          `;
-          document.head.appendChild(sparkleStyle);
-          document.body.appendChild(sparkle);
-          
-          setTimeout(() => {
-            if (sparkle.parentNode) {
-              sparkle.parentNode.removeChild(sparkle);
-            }
-          }, 2000);
-        }, i * 200);
-      }
-    }
-  });
 }

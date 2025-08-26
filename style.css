@@ -18,6 +18,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  gap: 1.5rem;
   padding: 15px 40px;
   background: #2c5a61;
   backdrop-filter: blur(10px);
@@ -34,6 +36,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #6e61ff;
+  cursor: pointer;
 }
 
 .logo-icon {
@@ -55,6 +58,30 @@ body {
   40% { transform: translateY(-5px); }
   60% { transform: translateY(-3px); }
 } */
+ .navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+ }
+ .navbar-toggle .bar {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px auto;
+  transition: all 0.3s ease;
+ }
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
 
 .nav-links {
   display: flex;
@@ -69,7 +96,8 @@ body {
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 25px;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -873,11 +901,6 @@ body {
   color: white;
 }
 
-.logo {
-  color: white;
-  font-size: 24px;
-}
-
 /* Footer */
 .footer {
   background: #2b3233;
@@ -934,20 +957,37 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .navbar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    backdrop-filter: none;
   }
   
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: #15191a;
+    backdrop-filter: blur(20px);
+  }
+  .nav-links.active {
+    display: flex;
+    transform: all 0.3s ease;
+  }
+  .navbar-toggle{
+    display: block;
+    z-index: 999;
   }
   
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    align-items: center;
   }
   
   .search-box {
