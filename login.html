@@ -71,13 +71,14 @@
     // Login functionality
     const loginForm = document.getElementById("loginForm");
     const togglePassword = document.getElementById("togglePassword");
-    
+    const eyeImage = document.getElementsByClassName("toggle-password");
+
     // Password visibility toggle
     togglePassword.onclick = function() {
       const passwordInput = document.getElementById('loginPassword');
       const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
       passwordInput.setAttribute('type', type);
-      togglePassword.textContent = type === 'password' ? '👁️' : '🙈';
+      togglePassword.textContent = type === 'password' ? '👀' : '🙈';
     };
     
     // Handle login form submission
@@ -111,13 +112,26 @@
         //   showNotification('🎉 Login successful! Redirecting...', 'success');
           
         //   // Store login info
-        //   if (typeof(Storage) !== "undefined") {
-        //     sessionStorage.setItem('isLoggedIn', 'true');
-        //     sessionStorage.setItem('userEmail', email);
-        //     if (rememberMe) {
-        //       localStorage.setItem('rememberUser', email);
-        //     }
-        //   }
+          if (typeof(Storage) !== "undefined") {
+            sessionStorage.setItem('isLoggedIn', 'true');
+            sessionStorage.setItem('userEmail', email);
+            if (rememberMe) {
+              localStorage.setItem('rememberUser', email);
+            }
+          }
+          function updateLoginState(isLoggedIn, email = '') {
+            if (isLoggedIn && loginLink) {
+              loginLink.innerHTML = ` HI, ${email.split('@')[0]}!`;
+              loginLink.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+              loginLink.href = '#';
+              loginLink.onclick = handleLogout;
+            } else if (loginLink) {
+              loginLink.innerHTML = ` Login`;
+              loginLink.style.background = 'linear-gradient(45deg, #ff6f61, #ff8a65)';
+              loginLink.href = 'login.html';
+              loginLink.onclick = null;
+            }
+          }
           
         //   // Redirect to home page after success
           setTimeout(() => {
@@ -141,18 +155,18 @@
     // Sign up link handlers
     document.getElementById('signupLink').onclick = function(e) {
       e.preventDefault();
-      showNotification('🚀 Sign up functionality would be implemented here', 'info');
+      showNotification(' Sign up functionality would be implemented here', 'info');
     };
     
     document.getElementById('signupLink2').onclick = function(e) {
       e.preventDefault();
-      showNotification('🚀 Sign up functionality would be implemented here', 'info');
+      showNotification(' Sign up functionality would be implemented here', 'info');
     };
     
     // Forgot password handler
     document.querySelector('.forgot-password').onclick = function(e) {
       e.preventDefault();
-      showNotification('📧 Password reset email would be sent', 'info');
+      showNotification(' Password reset email would be sent', 'info');
     };
     
     // Auto-fill remembered user
